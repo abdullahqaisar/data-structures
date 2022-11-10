@@ -27,6 +27,19 @@ class Linked_List:
                 runner = runner.next
             print()
 
+    def get_length(self):
+        self.length = 0
+        if self.head is not None:
+            self.length = 1
+            current = self.head
+
+            while current.next is not None:
+                current = current.next
+                self.length = self.length + 1
+            return self.length
+        else:
+            return 0
+
     def delete_node(self, value):
         if self.head is None:
             return False
@@ -47,3 +60,14 @@ class Linked_List:
                 return True
             else:
                 return False
+
+    #   Find the middle of a given linked list
+    def get_middle(self):
+        length = self.get_length()
+        mid = length // 2
+
+        current = self.head
+        while (mid is not 0) and (current.next is not None):
+            current = current.next
+            mid = mid - 1
+        return current.value
