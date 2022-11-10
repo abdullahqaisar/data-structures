@@ -10,14 +10,6 @@ my_linked_list.insert_node(7)
 
 my_linked_list.traverse()
 
-
-print(my_linked_list.delete_node(7))
+print(my_linked_list.delete_node(2))
+print(my_linked_list.delete_node(10))
 my_linked_list.traverse()
-
-# print(my_linked_list.head.next.value)
-
-# print(my_linked_list.head.next.next.value)
-# print(my_linked_list.head.next.next.next.value)
-# print(my_linked_list.head.next.next.next.next.value)
-
-
