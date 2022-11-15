@@ -1,12 +1,14 @@
+# Solve prime number by recursion
 
-def get_prime(position):
+def prime(n,j):
+    if(n<2):
+        return False
+    if(j==n):
+        return True
+    if(n%j==0):
+        return False
+    return prime(n,j+1)
 
-    if position = 1:
-        return position
-    else:
-        return (get_fib(position - 1) + get_fib(position - 2))
-
-# Test cases
-print(get_fib(9))
-print(get_fib(11))
-print(get_fib(0))
+for x in range(100):
+    if (prime(x,2)):
+        print(x)
